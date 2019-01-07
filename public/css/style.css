@@ -1,0 +1,64 @@
+*{
+	color: #2F3541;
+}
+body{
+	margin: 0;
+}
+	/* menu block */
+	.menu{
+		position: fixed;
+		left: 6.4%;
+		top: 90px; /* ??? */
+	}
+		.menu__menu-links{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+			width: 84px;
+			height: 117px;
+			margin: 54.1px 0 60px 0;
+		}
+		.menu__menu-links a{
+			text-decoration: none;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			line-height: normal;
+			font-size: 12px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: rgba(47, 53, 65, 0.5);
+		}
+		.menu__instagram{
+			text-decoration: none;
+			display: block;
+			font-family: Forum;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 24px;
+			font-size: 18px;
+			width: 72px;
+			height: 24px;
+			border-bottom: 1px solid #C4C4C4;
+			
+		}
+	/* menu block end */
+
+	/* content block */
+		.content{
+			margin: 35px 0 0 18.36%;
+		}
+			.content div{
+				width: 30%;
+				display: inline-block;
+			}
+			.content div:nth-child(6n + 2n){
+				width: 30%;
+				color: pink;
+			}
+			.content div:nth-child(6n + (2n-1)){
+				width: 30%;
+				color: orange;
+			}
+	/* content block end */

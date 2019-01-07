@@ -17,11 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <!-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -31,14 +30,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                        Left Side Of Navbar - comment
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                        Right Side Of Navbar - comment
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+                         Authentication Links - comment
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -70,11 +69,19 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
+        </nav> -->
+        <div class="menu">
+            <a href="index.html"><img src="{{ asset('img/logo.svg') }}"></a>
+                <div class="menu__menu-links">
+                    <a href="about_me.html">ОБО МНЕ</a>
+                    <a href="note.html">ЗАМЕТКИ</a>
+                    <a href="price.html">ЦЕНЫ</a>
+                    <a href="contact.html">КОНТАКТЫ</a>
+                </div>
+            <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
+        </div>
+        <div class="content">
             @yield('content')
-        </main>
-    </div>
+        </div>
 </body>
 </html>
