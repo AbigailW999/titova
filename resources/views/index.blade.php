@@ -24,15 +24,15 @@
     <img src="{{ asset('img/photo/3-3.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/5-1.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/5-2.jpg') }}" style="width:30%">
-    <img src="{{ asset('img/photo/5-3.jpg') }}" style="width:45%">
-    <img src="{{ asset('img/photo/6-3.jpg') }}" style="width:45%">
+    <img src="{{ asset('img/photo/5-3.jpg') }}" >
+    <img src="{{ asset('img/photo/6-3.jpg') }}" >
     <img src="{{ asset('img/photo/7-2.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/7-3.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/8-1.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/8-3.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/10-2.jpg') }}" style="width:30%">
     <img src="{{ asset('img/photo/10-3.jpg') }}" style="width:30%">
-    <img src="{{ asset('img/photo/10-1.jpg') }}" style="width:45%">
-    <img src="{{ asset('img/photo/9-3.jpg') }}"  style="width:45%">
+    <img src="{{ asset('img/photo/10-1.jpg') }}" >
+    <img src="{{ asset('img/photo/9-3.jpg') }}"  >
 
 @endsection
