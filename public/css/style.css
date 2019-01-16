@@ -49,16 +49,20 @@ body{
 		.content{
 			margin: 35px 0 0 18.36%;
 		}
-			.content div{
+			.content img{
 				width: 30%;
 				display: inline-block;
+				background-color: pink;
 			}
-			.content div:nth-child(6n + 2n){
-				width: 30%;
-				color: pink;
+			.content img:nth-child(6n + 2n){
+				width: 50%;
+				color: yellow;
 			}
-			.content div:nth-child(6n + (2n-1)){
-				width: 30%;
+			.content img:nth-child(6n + (2n-1)){
+				width: 50%;
 				color: orange;
 			}
+			/*.content__photo1{
+				background-image: url(img/photo/1-1.jpg);
+			}*/
 	/* content block end */
