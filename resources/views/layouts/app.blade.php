@@ -73,9 +73,9 @@
         <div class="menu">
             <a href="index.html"><img src="{{ asset('img/logo.svg') }}"></a>
                 <div class="menu__menu-links">
-                    <a href="about_me.html">ОБО МНЕ</a>
+                    <a href="{{asset('about_me')}}">ОБО МНЕ</a>
                     <a href="note.html">ЗАМЕТКИ</a>
-                    <a href="price.html">ЦЕНЫ</a>
+                    <a href="{{asset('price')}}">ЦЕНЫ</a>
                     <a href="contact.html">КОНТАКТЫ</a>
                 </div>
             <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
