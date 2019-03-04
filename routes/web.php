@@ -17,4 +17,8 @@ Auth::routes();
 
 Route::get('/{url}', 'PageController@getIndex');
 
+Route::get('notes', 'NoteController@getAll');
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');

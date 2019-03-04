@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    @section('styles')
+    @show
 </head>
 <body>
         <!-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
@@ -71,10 +73,10 @@
             </div>
         </nav> -->
         <div class="menu">
-            <a href="index.html"><img src="{{ asset('img/logo.svg') }}"></a>
+            <a href="{{asset('/')}}"><img src="{{ asset('img/logo.svg') }}" alt="DARIA TITOVA"></a>
                 <div class="menu__menu-links">
                     <a href="{{asset('about_me')}}">ОБО МНЕ</a>
-                    <a href="note.html">ЗАМЕТКИ</a>
+                    <a href="{{asset('notes')}}">ЗАМЕТКИ</a>
                     <a href="{{asset('price')}}">ЦЕНЫ</a>
                     <a href="contact.html">КОНТАКТЫ</a>
                 </div>

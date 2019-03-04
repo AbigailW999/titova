@@ -8,7 +8,7 @@ body{
 	.menu{
 		position: fixed;
 		left: 6.4%;
-		top: 90px; /* ??? */
+		top: 65px;
 	}
 		.menu__menu-links{
 			display: flex;
@@ -49,10 +49,9 @@ body{
 		.content{
 			margin: 35px 0 0 18.36%;
 		}
-			.content img{
+			.photo{
 				width: 30%;
 				display: inline-block;
-				background-color: pink;
 			}
 			.content img:nth-child(6n + 2n){
 				width: 50%;
@@ -66,3 +65,5 @@ body{
 				background-image: url(img/photo/1-1.jpg);
 			}*/
 	/* content block end */
+
+
