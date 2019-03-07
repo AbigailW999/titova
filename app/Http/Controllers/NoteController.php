@@ -11,4 +11,8 @@ class NoteController extends Controller
     	return view('note', compact('cats'));
     }
 
+    public function getOne($id = null){
+    	$obj = Note::find($id);
+    	return view('note_single_p', compact('obj'));
+    }
 }

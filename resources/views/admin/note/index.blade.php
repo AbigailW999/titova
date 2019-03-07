@@ -16,8 +16,9 @@
                         <th>
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
-                        <th>name</th>
-<th>picture</th>
+                        <th>date_note</th>
+<th>name</th>
+<th>pic_note</th>
 <th>status</th>
 
                         <th>&nbsp;</th>
@@ -30,8 +31,9 @@
                             <td>
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
-                            <td>{{ $row->name }}</td>
-<td>@if($row->picture != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->picture }}">@endif</td>
+                            <td>{{ $row->date_note }}</td>
+<td>{{ $row->name }}</td>
+<td>@if($row->pic_note != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->pic_note }}">@endif</td>
 <td>{{ $row->status }}</td>
 
                             <td>

@@ -16,9 +16,10 @@ class CreateNoteTable extends Migration {
         Model::unguard();
         Schema::create('note',function(Blueprint $table){
             $table->increments("id");
+            $table->string("date_note")->nullable();
             $table->string("name")->nullable();
             $table->text("body")->nullable();
-            $table->string("picture")->nullable();
+            $table->string("pic_note")->nullable();
             $table->string("status")->nullable();
             $table->timestamps();
             $table->softDeletes();

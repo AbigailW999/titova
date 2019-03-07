@@ -25,6 +25,7 @@ class UpdateMessageRequest extends FormRequest {
 	{
 		return [
             'name' => 'required', 
+            'contact' => 'required', 
             
 		];
 	}

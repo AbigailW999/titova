@@ -78,7 +78,7 @@
                     <a href="{{asset('about_me')}}">ОБО МНЕ</a>
                     <a href="{{asset('notes')}}">ЗАМЕТКИ</a>
                     <a href="{{asset('price')}}">ЦЕНЫ</a>
-                    <a href="contact.html">КОНТАКТЫ</a>
+                    <a href="{{asset('message')}}">КОНТАКТЫ</a>
                 </div>
             <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
         </div>

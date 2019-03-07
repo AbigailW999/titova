@@ -15,10 +15,12 @@ Route::get('/', 'BaseController@getIndex');
 
 Auth::routes();
 
-Route::get('/{url}', 'PageController@getIndex');
+Route::get('message', 'MessageController@getIndex');
 
 Route::get('notes', 'NoteController@getAll');
 
-
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('notes/{id}', 'NoteController@getOne');
+
+Route::get('/{url}', 'PageController@getIndex');//always at the end(!!)

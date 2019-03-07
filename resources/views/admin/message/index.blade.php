@@ -17,6 +17,7 @@
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
                         <th>name</th>
+<th>contact</th>
 <th>picture</th>
 <th>photo_id</th>
 
@@ -31,6 +32,7 @@
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
                             <td>{{ $row->name }}</td>
+<td>{{ $row->contact }}</td>
 <td>@if($row->picture != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->picture }}">@endif</td>
 <td>{{ isset($row->photo->id) ? $row->photo->id : '' }}</td>
 

@@ -25,6 +25,7 @@ class CreateMessageRequest extends FormRequest {
 	{
 		return [
             'name' => 'required', 
+            'contact' => 'required', 
             
 		];
 	}

@@ -19,6 +19,12 @@
 {!! Form::open(array('files' => true, 'route' => config('quickadmin.route').'.note.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
+    {!! Form::label('date_note', 'date_note', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('date_note', old('date_note'), array('class'=>'form-control')) !!}
+        
+    </div>
+</div><div class="form-group">
     {!! Form::label('name', 'name', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('name', old('name'), array('class'=>'form-control')) !!}
@@ -31,11 +37,11 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('picture', 'picture', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('pic_note', 'pic_note', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('picture') !!}
-        {!! Form::hidden('picture_w', 4096) !!}
-        {!! Form::hidden('picture_h', 4096) !!}
+        {!! Form::file('pic_note') !!}
+        {!! Form::hidden('pic_note_w', 4096) !!}
+        {!! Form::hidden('pic_note_h', 4096) !!}
         
     </div>
 </div><div class="form-group">

@@ -23,7 +23,8 @@ class Message extends Model {
     
     protected $fillable = [
           'name',
-          'body',
+          'contact',
+          'description',
           'picture',
           'photo_id'
     ];

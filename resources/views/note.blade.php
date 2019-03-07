@@ -6,8 +6,9 @@
 @endsection
 
 @section('content')
+	<h1>Полезные заметки</h1>
 	@foreach($cats as $cat)
-        {!! $cat->name !!}
-	    {!! $cat->body !!}
+		{!! $cat->date_note !!}
+	    <a href="{{asset('notes/'.$cat->id)}}"><h3>{!! $cat->name !!}</h3></a>
     @endforeach    
 @endsection

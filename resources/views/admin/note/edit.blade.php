@@ -19,6 +19,12 @@
 {!! Form::model($note, array('files' => true, 'class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array(config('quickadmin.route').'.note.update', $note->id))) !!}
 
 <div class="form-group">
+    {!! Form::label('date_note', 'date_note', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('date_note', old('date_note',$note->date_note), array('class'=>'form-control')) !!}
+        
+    </div>
+</div><div class="form-group">
     {!! Form::label('name', 'name', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('name', old('name',$note->name), array('class'=>'form-control')) !!}
@@ -31,11 +37,11 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('picture', 'picture', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('pic_note', 'pic_note', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('picture') !!}
-        {!! Form::hidden('picture_w', 4096) !!}
-        {!! Form::hidden('picture_h', 4096) !!}
+        {!! Form::file('pic_note') !!}
+        {!! Form::hidden('pic_note_w', 4096) !!}
+        {!! Form::hidden('pic_note_h', 4096) !!}
         
     </div>
 </div><div class="form-group">

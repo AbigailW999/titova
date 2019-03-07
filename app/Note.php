@@ -22,9 +22,10 @@ class Note extends Model {
     protected $table    = 'note';
     
     protected $fillable = [
+          'date_note',
           'name',
           'body',
-          'picture',
+          'pic_note',
           'status'
     ];
     
