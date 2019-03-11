@@ -15,7 +15,9 @@ Route::get('/', 'BaseController@getIndex');
 
 Auth::routes();
 
-Route::get('message', 'MessageController@getIndex');
+Route::get('contact', 'MessageController@getIndex');
+
+Route::get('contact_form', 'MessageFormController@getIndex');
 
 Route::get('notes', 'NoteController@getAll');
 

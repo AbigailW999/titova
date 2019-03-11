@@ -6,7 +6,9 @@
 @endsection
 
 @section('content')
-	<input type="text" name="text">
-	<input type="text" name="text">
-	<input type="text" name="text">
+	<p><a href="#">Звонок</a>, <a href="#">СМС</a>, <a href="#">Viber</a>, <a href="#">WhatsApp</a></p>
+	<h1>+375 (29) 369-41-15</h1>
+	<form action="/contact_form/">
+    	<button type="submit" class="contact_button">Отправить сообщение</button>
+	</form>
 @endsection

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Photo;
 
 class BaseController extends Controller
 {
     public function getIndex(){
-    	return view('index');
+    	$name_photo = Photo::all();
+    	return view('index', compact('name_photo'));
     }
 }

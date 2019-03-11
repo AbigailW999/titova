@@ -1,3 +1,14 @@
+@font-face{
+    font-family: Forum;
+    src: url(../public/fonts/Forum.eot); /* Для IE5-8 */
+    src: local(forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
+}
+@font-face{
+    font-family: Roboto;
+    src: url(../public/fonts/Roboto.eot); /* Для IE5-8 */
+    src: local(Roboto), url(../public/fonts/Roboto.ttf); /* Для остальных браузеров */
+}
+
 /* about_me */
 	.card-body{
 		
@@ -52,3 +63,134 @@
 				padding-bottom: 20px;/*????*/
 			}
 /* about_me end */
+
+/* contact */
+	.contact_button{
+		background-color: white;
+		border: 1px solid #E5E5E5;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: rgba(47, 53, 65, 0.5);
+		padding: 24px 30px 21px 30px;
+	}
+/* contact end */
+
+/* contact form */
+	.contact_form input{
+		border: 1px solid #E5E5E5;
+	}
+	
+
+ 	input[type="text"]{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		font-size: 18px;
+		color: rgba(47, 53, 65, 0.5);
+		outline: none;
+		
+
+ 	}
+ 	input[type="text"]::-webkit-input-placeholder {
+    	font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		font-size: 18px;
+		color: rgba(47, 53, 65, 0.5);
+		outline: none;
+
+    }
+    input[type="text"]::-moz-placeholder {
+    	font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		font-size: 18px;
+		color: rgba(47, 53, 65, 0.5);
+		outline: none;
+
+    } 
+    .contact_form_name{
+    	padding: 21px 188px 15px 20px;
+		width: 400px;
+		height: 60px;
+		box-sizing: border-box;
+		margin-bottom: 25px;
+    }
+    .contact_form_numb_email{
+    	padding: 21px 188px 15px 20px;
+		width: 400px;
+		height: 60px;
+		box-sizing: border-box;
+		margin-bottom: 25px;
+    }
+	textarea{
+		padding-left: 20px;
+		padding-top: 21px;
+		height: 150px;
+		width: 400px;
+		box-sizing: border-box;
+		border: 1px solid #E5E5E5;
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		font-size: 18px;
+		color: rgba(47, 53, 65, 0.5);
+	}
+	.contact_form_button{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: rgba(47, 53, 65, 0.5);
+		background-color: #E5E5E5;
+		padding: 25px 30px 20px 30px;
+
+	}
+
+	.contact_upload_container{
+	     position: relative;
+	     z-index: 10;
+	    margin-top: 32px;
+	    margin-bottom: 40px;
+	}
+	.contact_upload_container img{
+		vertical-align:middle;
+		margin-right: 8px;
+	}
+	.contact_upload_container input[type=file] {
+	     width: 0.1px;
+	     height: 0.1px;
+	     opacity: 0;
+	     position: absolute;
+	     z-index: -10;
+	}
+	.contact_upload_container label{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		font-size: 18px;
+
+color: rgba(47, 53, 65, 0.5);
+	}
+	.contact_upload_container label:hover {
+	     cursor: pointer;
+	}
+	.contact_upload_container label.focus {
+	     outline: 1px solid #0078d7;
+	     outline: -webkit-focus-ring-color auto 5px;
+	}
+
+/* contact form end */

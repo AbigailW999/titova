@@ -4,6 +4,16 @@
 body{
 	margin: 0;
 }
+@font-face{
+    font-family: Forum;
+    src: url(../public/fonts/Forum.eot); /* Для IE5-8 */
+    src: local(forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
+}
+@font-face{
+    font-family: Roboto;
+    src: url(../public/fonts/Roboto.eot); /* Для IE5-8 */
+    src: local(Roboto), url(../public/fonts/Roboto.ttf); /* Для остальных браузеров */
+}
 	/* menu block */
 	.menu{
 		position: fixed;
