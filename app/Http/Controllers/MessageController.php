@@ -6,7 +6,7 @@ use App\Message;
 
 class MessageController extends Controller
 {
-    public function getIndex(){
-    	return view('message');
+    public function postIndex(){
+    	dd($_POST);
     }
 }
