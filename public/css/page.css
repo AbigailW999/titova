@@ -1,7 +1,7 @@
 @font-face{
     font-family: Forum;
     src: url(../public/fonts/Forum.eot); /* Для IE5-8 */
-    src: local(forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
+    src: local(Forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
 }
 @font-face{
     font-family: Roboto;

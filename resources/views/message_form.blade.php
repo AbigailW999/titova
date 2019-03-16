@@ -5,6 +5,11 @@
 <link href="{{ asset('css/page.css') }}" rel="stylesheet"><!-- new css -->
 @endsection
 
+@section('scripts')
+@parent
+<script src="{{ asset('js/page.js') }}" defer></script>
+@endsection
+
 @section('content')
 	<h1>сообщение</h1>
 	<form name="contact_form" class="contact_form" method="POST" enctype="multipart/form-data" action="message">

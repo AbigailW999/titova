@@ -11,24 +11,25 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/index.js') }}" defer></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @section('styles')
+    @show
+
+    @section('scripts')
     @show
 </head>
 <body>
         <div class="menu">
             <a href="{{asset('/')}}"><img src="{{ asset('img/logo.svg') }}" alt="DARIA TITOVA"></a>
                 <div class="menu__menu-links">
-                    <a href="{{asset('about_me')}}">ОБО МНЕ</a>
-                    <a href="{{asset('notes')}}">ЗАМЕТКИ</a>
-                    <a href="{{asset('price')}}">ЦЕНЫ</a>
-                    <a href="{{asset('contact')}}">КОНТАКТЫ</a>
+                    <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('about_me')}}">ОБО МНЕ</a></div>
+                    <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('notes')}}">ЗАМЕТКИ</a></div>
+                    <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('price')}}">ЦЕНЫ</a></div>
+                    <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('contact')}}">КОНТАКТЫ</a></div>
                 </div>
             <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
         </div>
