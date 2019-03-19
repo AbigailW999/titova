@@ -50,10 +50,12 @@ $(function () {
 	});
 
 	$('.img_button').bind('click', function(){
-		$(".modal").css(
+		var id = $(this).attr("data-id");
+
+		$('#'+id).css(
 	    	{'display': 'block'}
 			);
-		  $(".modal-overlay").css(
+		  $("#a"+id).css(
 	    	{'opacity': '0.7'}
 			);
 		  $(".block").css(

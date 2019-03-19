@@ -19,7 +19,9 @@ Route::get('contact', 'ContactController@getIndex');
 
 Route::get('contact_form', 'MessageFormController@getIndex');
 
-Route::post('message', 'MessageController@postIndex');
+Route::post('message', 'MessageController@postContact');
+
+Route::post('message/{id}', 'MessageController@postIndex');
 
 Route::get('notes', 'NoteController@getAll');
 

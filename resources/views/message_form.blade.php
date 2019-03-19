@@ -12,7 +12,8 @@
 
 @section('content')
 	<h1>сообщение</h1>
-	<form name="contact_form" class="contact_form" method="POST" enctype="multipart/form-data" action="message">
+	<form name="contact_form" class="contact_form" method="POST" enctype="multipart/form-data" action="{{asset('message')}}">
+	{!! csrf_field() !!}
 		<div class="contact_form_box">
 			<input type="text" name="name" class="contact_form_i" required><br>
 			<label class="lbl">Ваше имя</label>

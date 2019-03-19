@@ -1,16 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @php
+    $a = 1;
+    @endphp
     @foreach($name_photo as $one)
         <div class="holder">
-            <div class="modal-overlay">
+            <div class="modal-overlay" id="a{{$a}}">
                 <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}">
                 <div class="block">
-            <button type="submit" class="img_button">WANT IT</button>
+            <button type="submit" class="img_button" data-id="{{$a}}">WANT IT</button>
         </div>
-                <div class="modal">
-                    <form method="POST">
+                <div class="modal" id="{{$a}}">
+                    <form method="POST" action="{{asset('message/'.$one->id)}}">
+                        {!! csrf_field() !!}
                         <p>Contact</p>
                         <input type="text" name="contact" placeholder="email or phone"><br>
                         <button type="submit">Send</button>
@@ -19,6 +22,9 @@
                 </div>
             </div>
         </div>
+        @php
+        $a++;
+        @endphp
     @endforeach
 
 @endsection
