@@ -24,7 +24,9 @@ class Photo extends Model {
     protected $fillable = [
           'name',
           'picture',
-          'status'
+          'status',
+          'photographer',
+          'makeup'
     ];
     
 

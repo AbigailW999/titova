@@ -19,7 +19,7 @@
 {!! Form::open(array('files' => true, 'route' => config('quickadmin.route').'.message.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('name', 'name*', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('name', 'name', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('name', old('name'), array('class'=>'form-control')) !!}
         

@@ -14,16 +14,16 @@
 	<h1>сообщение</h1>
 	<form name="contact_form" class="contact_form" method="POST" enctype="multipart/form-data" action="message">
 		<div class="contact_form_box">
-			<input type="text" name="name" class="contact_form_name" required><br>
-			<label>Ваше имя</label>
+			<input type="text" name="name" class="contact_form_i" required><br>
+			<label class="lbl">Ваше имя</label>
 		</div>
 		<div class="contact_form_box">
-			<input type="text" name="contact" pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\" title="cds" oninvalid="setCustomValidity('Пожалуйста, введите номер телефона или email')" class="contact_form_numb_email" required><br>
-			<label>Телефон или email</label>
+			<input type="text" name="contact" pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\" title="cds" oninvalid="setCustomValidity('Пожалуйста, введите номер телефона или email')" class="contact_form_i" required><br>
+			<label class="lbl">Телефон или email</label>
 		</div>
 		<div class="contact_form_box">
-			<textarea name="description" class="contact_form_decription"></textarea><br>
-			<label>Ваш вопрос или предложение</label>
+			<textarea name="description" class="contact_form_ii"></textarea><br>
+			<label class="lbl">Ваш вопрос или предложение</label>
 		</div>
 		<div class="contact_upload_container">
 			<input id="file-input" type="file" name="picture" accept="image/*" multiple>

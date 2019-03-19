@@ -38,6 +38,18 @@
         {!! Form::text('status', old('status'), array('class'=>'form-control')) !!}
         
     </div>
+</div><div class="form-group">
+    {!! Form::label('photographer', 'photographer', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('photographer', old('photographer'), array('class'=>'form-control')) !!}
+        
+    </div>
+</div><div class="form-group">
+    {!! Form::label('makeup', 'makeup', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('makeup', old('makeup'), array('class'=>'form-control')) !!}
+        
+    </div>
 </div>
 
 <div class="form-group">

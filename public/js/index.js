@@ -29,3 +29,39 @@ $(function () {
 });
 
 //active menu items end
+
+//im form
+
+$(function () {
+
+	 
+	 $('.closeButton').bind('click', function(){
+		  $(".modal").css(
+	    	{'display': 'none'}
+			);
+		  $(".modal-overlay").css(
+	    	{'opacity': '1'}
+			);
+		 $(".block").css(
+	    	{'z-index': '11'}
+			);
+
+	  alert('close');
+	});
+
+	$('.img_button').bind('click', function(){
+		$(".modal").css(
+	    	{'display': 'block'}
+			);
+		  $(".modal-overlay").css(
+	    	{'opacity': '0.7'}
+			);
+		  $(".block").css(
+	    	{'z-index': '-10'}
+			);
+		 
+	  alert('open');
+	});
+
+
+});

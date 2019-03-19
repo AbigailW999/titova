@@ -19,7 +19,7 @@
 {!! Form::model($message, array('files' => true, 'class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array(config('quickadmin.route').'.message.update', $message->id))) !!}
 
 <div class="form-group">
-    {!! Form::label('name', 'name*', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('name', 'name', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('name', old('name',$message->name), array('class'=>'form-control')) !!}
         

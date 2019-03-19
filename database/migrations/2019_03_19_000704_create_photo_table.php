@@ -19,6 +19,8 @@ class CreatePhotoTable extends Migration {
             $table->string("name");
             $table->string("picture")->nullable();
             $table->string("status")->nullable();
+            $table->string("photographer")->nullable();
+            $table->string("makeup")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

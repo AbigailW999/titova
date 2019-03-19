@@ -4,16 +4,8 @@
 body{
 	margin: 0;
 }
-@font-face{
-    font-family: Forum;
-    src: url(../public/fonts/Forum.eot); /* Для IE5-8 */
-    src: local(forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
-}
-@font-face{
-    font-family: Roboto;
-    src: url(../public/fonts/Roboto.eot); /* Для IE5-8 */
-    src: local(Roboto), url(../public/fonts/Roboto.ttf); /* Для остальных браузеров */
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Forum');
 	/* menu block */
 	.menu{
 		position: fixed;
@@ -65,8 +57,8 @@ body{
 			margin: 35px 0 0 18.36%;
 		}
 			.photo{
-				width: 30%;
-				display: inline-block;
+				width: 100%;
+				z-index: 7;
 			}
 			.content img:nth-child(6n + 2n){
 				width: 50%;
@@ -87,3 +79,50 @@ body{
 .current img{
 	visibility: visible;
 }
+
+/* img hover button */
+	.holder{
+position:relative;
+width: 30%;
+display: inline-block;
+}
+.block{
+position:absolute;
+left:0;
+bottom:0;
+right:0;
+padding:20px;
+display:none;
+}
+.modal{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	background-color: white;
+	z-index: 10;
+	display: none;
+}
+.modal-overlay{
+	z-index: 9;
+	background-color: white;
+	opacity: 1;
+
+}
+.holder:hover .block{
+display:block;
+}
+/* img hover button end */
+	.img_button{
+		background-color: white;
+		border: 1px solid #E5E5E5;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: rgba(47, 53, 65, 0.5);
+		z-index: 8;
+	}
+/* modal window */

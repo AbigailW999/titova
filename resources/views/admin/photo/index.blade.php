@@ -19,6 +19,8 @@
                         <th>name</th>
 <th>picture</th>
 <th>status</th>
+<th>photographer</th>
+<th>makeup</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -33,6 +35,8 @@
                             <td>{{ $row->name }}</td>
 <td>@if($row->picture != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->picture }}">@endif</td>
 <td>{{ $row->status }}</td>
+<td>{{ $row->photographer }}</td>
+<td>{{ $row->makeup }}</td>
 
                             <td>
                                 {!! link_to_route(config('quickadmin.route').'.photo.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}

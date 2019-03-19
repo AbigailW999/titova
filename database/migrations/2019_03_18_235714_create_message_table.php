@@ -16,7 +16,7 @@ class CreateMessageTable extends Migration {
         Model::unguard();
         Schema::create('message',function(Blueprint $table){
             $table->increments("id");
-            $table->string("name");
+            $table->string("name")->nullable();
             $table->string("contact");
             $table->text("description")->nullable();
             $table->string("picture")->nullable();

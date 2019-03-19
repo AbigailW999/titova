@@ -1,13 +1,5 @@
-@font-face{
-    font-family: Forum;
-    src: url(../public/fonts/Forum.eot); /* Для IE5-8 */
-    src: local(Forum), url(../public/fonts/Forum.ttf); /* Для остальных браузеров */
-}
-@font-face{
-    font-family: Roboto;
-    src: url(../public/fonts/Roboto.eot); /* Для IE5-8 */
-    src: local(Roboto), url(../public/fonts/Roboto.ttf); /* Для остальных браузеров */
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Forum');
 
 /* about_me */
 	.card-body{
@@ -122,20 +114,14 @@
     	outline: none;
     	border-color: #FD4B4B;
     }
-    .contact_form_name{
+    .contact_form_i{
     	padding: 21px 188px 15px 20px;
 		width: 400px;
 		height: 60px;
 		box-sizing: border-box;
 		margin-bottom: 25px;
     }
-    .contact_form_numb_email{
-    	padding: 21px 188px 15px 20px;
-		width: 400px;
-		height: 60px;
-		box-sizing: border-box;
-		margin-bottom: 25px;
-    }
+
 	textarea{
 		padding-left: 20px;
 		padding-top: 21px;
@@ -189,7 +175,7 @@
 		.contact_form_box{
 			position: relative;
 		}
-		label {
+		.lbl {
 		  font-family: Forum;
 		  font-style: normal;
 		  font-weight: normal;
@@ -209,7 +195,7 @@
 		}
 
 		/* active state */
-		textarea:focus ~ label, textarea:valid ~ label {
+		textarea:focus ~ .lbl, textarea:valid ~ .lbl {
 		  font-family: Forum;
 		  font-style: normal;
 		  font-weight: normal;
@@ -221,7 +207,7 @@
 		  padding-right: 5px;
 		  padding-left: 5px;
 		}
-		input:focus ~ label, input:valid ~ label {
+		input:focus ~ .lbl, input:valid ~ .lbl {
 		  font-family: Forum;
 		  font-style: normal;
 		  font-weight: normal;
