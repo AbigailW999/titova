@@ -45,8 +45,6 @@ $(function () {
 		 $(".block").css(
 	    	{'z-index': '11'}
 			);
-
-	  alert('close');
 	});
 
 	$('.img_button').bind('click', function(){
@@ -61,9 +59,6 @@ $(function () {
 		  $(".block").css(
 	    	{'z-index': '-10'}
 			);
-		 
-	  alert('open');
 	});
-
 
 });

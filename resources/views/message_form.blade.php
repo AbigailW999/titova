@@ -19,7 +19,7 @@
 			<label class="lbl">Ваше имя</label>
 		</div>
 		<div class="contact_form_box">
-			<input type="text" name="contact" pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\" title="cds" oninvalid="setCustomValidity('Пожалуйста, введите номер телефона или email')" class="contact_form_i" required><br>
+			<input type="text" name="contact" pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\" title="contact" oninvalid="setCustomValidity('Пожалуйста, введите номер телефона или email')" class="contact_form_i" required><br>
 			<label class="lbl">Телефон или email</label>
 		</div>
 		<div class="contact_form_box">
@@ -29,6 +29,7 @@
 		<div class="contact_upload_container">
 			<input id="file-input" type="file" name="picture" accept="image/*" multiple>
             <label for="file-input"><img src="../img/upload.png">Прикрепить файл</label>
+            <div class="contact_form_file-name"></div>
 		</div>
 		<input type="submit" name="send" value="Отправить сообщение" class="contact_form_button">
 	</form>
