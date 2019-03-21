@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Forum');
 
+html { overflow-x: hidden; }
+
+.menu{
+	border-right: 1px solid #E5E5E5;
+}
+
+/* content_box */
+	.content_box{
+		margin-left: 8.1%;
+		margin-top: 65px;
+	}
+/* content_box end */
+
 /* about_me */
-	.card-body{
+	.about_me_box1{
 		
+	}
+	.about_me_box2{
+		width: 70%;
 	}
 		h1{
 			font-family: Forum;
@@ -14,6 +30,8 @@
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
 			color: #2F3541;
+
+			margin-bottom: 40px;
 		}
 		.card-body a{
 			text-decoration: none;
@@ -36,7 +54,7 @@
 		}
 		.daria{
 			position: absolute;
-			right: 0px;
+			right: -113px;
 			top:0px;
 			height: 100%;
 		}
@@ -57,6 +75,32 @@
 /* about_me end */
 
 /* contact */
+	.contact_box{
+		margin-top: 282px;
+	}
+	.contact_box a{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 26px;
+		text-decoration: none;
+		color: #2F3541;
+	}
+	.contact_box .contact_phone{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		line-height: 60px;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #2F3541;
+	}
+	.contact_phone_box{
+		margin-bottom: 40px;
+	}
 	.contact_button{
 		background-color: white;
 		border: 1px solid #E5E5E5;
@@ -70,158 +114,112 @@
 		color: rgba(47, 53, 65, 0.5);
 		padding: 24px 30px 21px 30px;
 	}
+	.contact_button{
+		cursor: pointer;
+	}
 /* contact end */
 
 /* contact form */
-	.contact_form input{
-		border: 1px solid #E5E5E5;
-		display: block;
-		z-index: -10;
+/* moving placeholder */
+	.h1_form{
+		margin-bottom: 30px;
+	}
+	.form__group {
+	  position: relative;
+	  padding: 0 0 25px;
+	}
+	#form__group_textarea{
+		padding-bottom: 0px;
 	}
 
- 	input[type="text"]{
-		font-family: Forum;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 24px;
-		font-size: 18px;
-		color: #2F3541;
-		outline: none;
-		
-
- 	}
- 	input[type="text"]::-webkit-input-placeholder {
-    	font-family: Forum;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 24px;
-		font-size: 18px;
-		color: #2F3541;
-		outline: none;
-
-    }
-    input[type="text"]::-moz-placeholder {
-    	font-family: Forum;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 24px;
-		font-size: 18px;
-		color: #2F3541;
-		outline: none;
-
-    } 
-    input:focus {
-    	outline: none;
-    	border-color: #FD4B4B;
-    }
-    .contact_form_i{
-    	padding: 21px 188px 15px 20px;
-		width: 400px;
-		height: 60px;
-		box-sizing: border-box;
-		margin-bottom: 25px;
-    }
-
-	textarea{
-		padding-left: 20px;
-		padding-top: 21px;
-		height: 150px;
-		width: 400px;
-		box-sizing: border-box;
-		border: 1px solid #E5E5E5;
-		font-family: Forum;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 24px;
-		font-size: 18px;
-		color: #2F3541;
-		display: block;
+	.form__field {
+	  font-family: inherit;
+	  width: 402px;
+	  height: 62px;
+	  border: 1px solid #d2d2d2;
+	  outline: 0;
+	  font-size: 16px;
+	  color: #212121;
+	  padding: 7px 0;
+	  box-sizing: border-box;
+	  background: transparent;
+	  transition: border-color 0.2s;
+	  padding-left: 20px;
 	}
 
-	textarea::-webkit-input-placeholder {
+	#textarea{
+	  height: 150px;
+	  padding-top: 21px;
+	}
+
+	.form__field::placeholder {
+	  color: transparent;
+	}
+
+	.form__field:placeholder-shown ~ .form__label {
+	  cursor: text;
+	  top: 20px;
+	  left: 15px;
+
+	  font-family: Forum;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-size: 18px;
+	  line-height: 24px;
 	  color: rgba(47, 53, 65, 0.5);
-	}
-	textarea:-moz-placeholder {
-	  color: rgba(47, 53, 65, 0.5);  
-	}
-	textarea::-moz-placeholder {
-	  color: rgba(47, 53, 65, 0.5); 
-	}
-	textarea:-ms-input-placeholder {
-	  color: rgba(47, 53, 65, 0.5);  
-	}
-	textarea::placeholder {
-	  color: rgba(47, 53, 65, 0.5); 
+
+	  background-color: white;
+	  padding-left: 5px;
+	  padding-right: 5px;
 	}
 
-	textarea:focus {
-    	outline: none;
-    	border-color: #FD4B4B;
-    }
+	label,
+	.form__field:focus ~ .form__label {
+	  position: absolute;
+	  top: -10px;
+	  display: block;
+	  transition: 0.2s;
+	  font-size: 12px;
+	  color: #9b9b9b;
+
+	  font-family: Forum;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-size: 18px;
+	  line-height: 24px;
+
+	  left: 15px;
+
+	  background-color: white;
+
+	  padding-left: 5px;
+	  padding-right: 5px;
+	}
+
+	.form__field:focus ~ .form__label {
+	  color: #FD4B4B;
+	}
+
+	.form__field:focus {
+	  padding-bottom: 6px; 
+	  border: 1px solid #FD4B4B;
+	}
+
+
 	.contact_form_button{
-		font-family: Roboto;
-		font-style: normal;
-		font-weight: normal;
-		line-height: normal;
-		font-size: 12px;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		color: rgba(47, 53, 65, 0.5);
-		background-color: #E5E5E5;
-		padding: 25px 30px 20px 30px;
-
-	}
-	/* moving placeholder */
-		.contact_form_box{
-			position: relative;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			line-height: normal;
+			font-size: 12px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: rgba(47, 53, 65, 0.5);
+			background-color: #E5E5E5;
+			padding: 25px 30px 20px 30px;
+			border:0;
+			margin-top: 72px;
 		}
-		.lbl {
-		  font-family: Forum;
-		  font-style: normal;
-		  font-weight: normal;
-		  line-height: 24px;
-		  font-size: 18px;
-		  color: rgba(47, 53, 65, 0.5);
-		  background-color: white;
-		  position: absolute;
-		  pointer-events: none;
-		  left: 20px;
-		  top: 20px;
-		  transition: 0.2s ease all;
-		  -moz-transition: 0.2s ease all;
-		  -webkit-transition: 0.2s ease all;
-		  display: block;
-		  z-index: 10;
-		}
-
-		/* active state */
-		textarea:focus ~ .lbl, textarea:valid ~ .lbl {
-		  font-family: Forum;
-		  font-style: normal;
-		  font-weight: normal;
-		  line-height: 24px;
-		  font-size: 18px;
-		  color: #FD4B4B;
-		  top: -12px;
-		  left: 15px;
-		  padding-right: 5px;
-		  padding-left: 5px;
-		}
-		input:focus ~ .lbl, input:valid ~ .lbl {
-		  font-family: Forum;
-		  font-style: normal;
-		  font-weight: normal;
-		  line-height: 24px;
-		  font-size: 18px;
-		  color: #FD4B4B;
-		  top: -12px;
-		  left: 15px;
-		  padding-right: 5px;
-		  padding-left: 5px;
-		}
-
-
-
 	/* moving placeholder end */
 
 	/* upload button */
@@ -229,7 +227,6 @@
 		     position: relative;
 		     z-index: 10;
 		    margin-top: 32px;
-		    margin-bottom: 40px;
 		}
 		.contact_upload_container img{
 			vertical-align:middle;
@@ -249,7 +246,10 @@
 			line-height: 24px;
 			font-size: 18px;
 
-	color: rgba(47, 53, 65, 0.5);
+			color: rgba(47, 53, 65, 0.5);
+			left:0;
+			top: 0;
+			padding: 0;
 		}
 		.contact_upload_container label:hover {
 		     cursor: pointer;
@@ -261,6 +261,99 @@
 	/* upload button end */
 /* contact form end */
 
-body{
-	color: pink;
+
+/* 404 page */
+	.content_404page{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.content_404page-p{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 75px;
+		line-height: 99px;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		color: #2F3541;
+		margin-top: 142px;
+		margin-bottom: 0px;
+	}
+	.content_404page-p2{
+		margin-top: 0px;
+		margin-bottom: 40px;
+	}
+	.content_404page a{
+		margin-top: 70px;
+	}
+
+/* 404 page end */
+
+/* notes */
+	.date_note{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: normal;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+
+		color: rgba(47, 53, 65, 0.5);
+	}
+	.notes_links{
+		text-decoration: none;
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		line-height: 33px;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		border-bottom: 1px solid #E5E5E5;
+		color: #2F3541;
+	}
+	.note_link_box{
+		margin-bottom: 50px;
+	}
+/* notes end*/
+
+/* single page note */
+	.date_single_note{
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: normal;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+
+		color: rgba(47, 53, 65, 0.5);
+	}
+	.h1_single_note{
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+/* single page note end */
+
+@media only screen and (max-width:570px){
+	
+}
+@media only screen and (min-width:571px) and (max-width:992px){
+	
+}
+
+@media only screen and (min-width:993px) and (max-width:1560px){
+
+}
+
+@media only screen and (min-width:1561px){
+	
 }

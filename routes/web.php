@@ -15,8 +15,6 @@ Route::get('/', 'BaseController@getIndex');
 
 Auth::routes();
 
-Route::get('contact', 'ContactController@getIndex');
-
 Route::get('contact_form', 'MessageFormController@getIndex');
 
 Route::post('message', 'MessageController@postContact');

@@ -1,5 +1,6 @@
 $(function () {
-
+	//alert( window.innerWidth );
+	//alert( window.innerHeight );
 	/* upload input value */
 	$('.contact_upload_container input').on('change', function() {
 		var splittedFakePath = this.value.split('\\');
@@ -11,6 +12,9 @@ $(function () {
 	    	{'display': 'block'}
 		);
 		$('.contact_form_file-name').append('<a href="#"><img src="img/close_form_button.png"></a>');
+		$('.contact_form_button').css(
+	    	{'margin-top': '53px'}
+		);
 
 
 		$('.contact_form_file-name a').bind('click', function(){
@@ -21,6 +25,9 @@ $(function () {
 		    	{'display': 'none'}
 				);
 			$('.contact_upload_container input').val('');
+			$('.contact_form_button').css(
+		    	{'margin-top': '72px'}
+			);
 		});
 
 	});

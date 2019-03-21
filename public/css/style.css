@@ -3,15 +3,19 @@
 }
 body{
 	margin: 0;
+	z-index: 3;
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Forum');
+	
+html { overflow-x: hidden; }
 	/* menu block */
 	.menu{
 		position: fixed;
-		left: 6.4%;
-		top: 65px;
-
+		top: 0;
+		left: 0;
+		padding: 69.2px 5.2% 0 6.4%;
+		height: 100%;
 	}
 		.menu__menu-links{
 			display: flex;
@@ -54,11 +58,12 @@ body{
 
 	/* content block */
 		.content{
-			margin: 35px 0 0 18.36%;
+			margin: 35px 0 0 18.3%;
 		}
 			.photo{
 				width: 100%;
 				z-index: 7;
+				
 			}
 			.content img:nth-child(6n + 2n){
 				width: 50%;
@@ -91,38 +96,42 @@ position:absolute;
 left:0;
 bottom:0;
 right:0;
-padding:20px;
+background-color: black;
 display:none;
 }
 .modal{
 	position: absolute;
-	left: 20px;
-	top: 20px;
-	background-color: white;
+	left: 0px;
+	top: 0px;
+	background-color: black;
 	z-index: 10;
 	display: none;
 }
-.modal-overlay{
-	z-index: 9;
-	background-color: white;
-	opacity: 1;
-
-}
 .holder:hover .block{
-display:block;
+	display:block;
 }
 /* img hover button end */
 	.img_button{
-		background-color: white;
-		border: 1px solid #E5E5E5;
-		font-family: Roboto;
-		font-style: normal;
-		font-weight: normal;
-		line-height: normal;
-		font-size: 12px;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		color: rgba(47, 53, 65, 0.5);
+		position: absolute;
+		right: 15px;
+		bottom:15px;
+		cursor: pointer;
 		z-index: 8;
 	}
 /* modal window */
+
+
+@media only screen and (max-width:570px){
+	
+}
+@media only screen and (min-width:571px) and (max-width:992px){
+	
+}
+
+@media only screen and (min-width:993px) and (max-width:1560px){
+
+}
+
+@media only screen and (min-width:1561px){
+	
+}

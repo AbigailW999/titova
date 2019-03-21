@@ -6,7 +6,9 @@
 @endsection
 
 @section('content')
+	<div class="content_box">
 		{!! $obj->date_note !!}
-	    <h1>{!! $obj->name !!}</h1>
-	    {!! $obj->body !!}    
+	    <h1 class="h1_single_note">{!! $obj->name !!}</h1>
+	    {!! $obj->body !!}  
+	</div>  
 @endsection

@@ -6,5 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="card-body">{!! $obj->body !!}</div>
+	<div class="content_box">
+    	{!! $obj->body !!}
+    </div>
 @endsection

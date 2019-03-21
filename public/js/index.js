@@ -42,23 +42,22 @@ $(function () {
 		  $(".modal-overlay").css(
 	    	{'opacity': '1'}
 			);
-		 $(".block").css(
-	    	{'z-index': '11'}
-			);
+
 	});
 
 	$('.img_button').bind('click', function(){
 		var id = $(this).attr("data-id");
+		var img_width = $('#ph'+id).width();
+		var img_height = $('#ph'+id).height();
+		console.log(img_height);
 
 		$('#'+id).css(
-	    	{'display': 'block'}
+	    	{'display': 'block','width': img_width, 'height': img_height}
 			);
-		  $("#a"+id).css(
-	    	{'opacity': '0.7'}
-			);
-		  $(".block").css(
-	    	{'z-index': '-10'}
+		  $(".img_button").css(
+	    	{'display': 'none'}
 			);
 	});
 
 });
+

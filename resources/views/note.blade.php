@@ -6,9 +6,13 @@
 @endsection
 
 @section('content')
-	<h1>Полезные заметки</h1>
-	@foreach($cats as $cat)
-		{!! $cat->date_note !!}
-	    <a href="{{asset('notes/'.$cat->id)}}"><h3>{!! $cat->name !!}</h3></a>
-    @endforeach    
+	<div class="content_box">
+		<h1>Полезные заметки</h1>
+		@foreach($cats as $cat)
+			<div class="note_link_box">
+				{!! $cat->date_note !!}
+			    <a href="{{asset('notes/'.$cat->id)}}" class="notes_links">{!! $cat->name !!}</a>
+			</div>
+	    @endforeach   
+	</div> 
 @endsection

@@ -6,11 +6,12 @@
     @endphp
     @foreach($name_photo as $one)
         <div class="holder">
-            <div class="modal-overlay" id="a{{$a}}">
-                <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}">
+            <div id="a{{$a}}">
+                <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}">
+            </div>
                 <div class="block">
-            <button type="submit" class="img_button" data-id="{{$a}}">WANT IT</button>
-        </div>
+                    <img src="{{ asset('img/want_it.png')}}" data-id="{{$a}}" class="img_button">
+                </div>
                 <div class="modal" id="{{$a}}">
                     <form method="POST" action="{{asset('message/'.$one->id)}}">
                         {!! csrf_field() !!}
@@ -20,7 +21,7 @@
                         <button class="closeButton">Close</button>
                     </form>
                 </div>
-            </div>
+            
         </div>
         @php
         $a++;
