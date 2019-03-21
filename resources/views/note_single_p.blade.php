@@ -7,8 +7,10 @@
 
 @section('content')
 	<div class="content_box">
-		{!! $obj->date_note !!}
-	    <h1 class="h1_single_note">{!! $obj->name !!}</h1>
-	    {!! $obj->body !!}  
+		<div class="single_n_box">
+			{!! $obj->date_note !!}
+		    <h1 class="h1_single_note">{!! $obj->name !!}</h1>
+		    {!! $obj->body !!}  
+		</div>
 	</div>  
 @endsection

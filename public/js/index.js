@@ -30,7 +30,7 @@ $(function () {
 
 //active menu items end
 
-//im form
+//img form
 
 $(function () {
 
@@ -39,10 +39,9 @@ $(function () {
 		  $(".modal").css(
 	    	{'display': 'none'}
 			);
-		  $(".modal-overlay").css(
-	    	{'opacity': '1'}
+		  $(".img_button").css(
+	    	{'display': 'block'}
 			);
-
 	});
 
 	$('.img_button').bind('click', function(){
@@ -60,4 +59,7 @@ $(function () {
 	});
 
 });
+
+//img form end
+
 

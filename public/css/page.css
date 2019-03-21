@@ -6,7 +6,9 @@ html { overflow-x: hidden; }
 .menu{
 	border-right: 1px solid #E5E5E5;
 }
-
+.content{
+			margin-right: 0;
+		}
 /* content_box */
 	.content_box{
 		margin-left: 8.1%;
@@ -218,8 +220,10 @@ html { overflow-x: hidden; }
 			background-color: #E5E5E5;
 			padding: 25px 30px 20px 30px;
 			border:0;
-			margin-top: 72px;
+			margin-top: 62px;
+			cursor: pointer;
 		}
+
 	/* moving placeholder end */
 
 	/* upload button */
@@ -297,6 +301,9 @@ html { overflow-x: hidden; }
 /* 404 page end */
 
 /* notes */
+	.note_box{
+		margin-right: 23.2%;
+	}
 	.date_note{
 		font-family: Roboto;
 		font-style: normal;
@@ -326,6 +333,9 @@ html { overflow-x: hidden; }
 /* notes end*/
 
 /* single page note */
+	.single_n_box{
+		margin-right: 23.2%;
+	}
 	.date_single_note{
 		font-family: Roboto;
 		font-style: normal;

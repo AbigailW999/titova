@@ -58,20 +58,11 @@ html { overflow-x: hidden; }
 
 	/* content block */
 		.content{
-			margin: 35px 0 0 18.3%;
+			margin: 35px 4.2% 0 18.3%;
 		}
 			.photo{
 				width: 100%;
 				z-index: 7;
-				
-			}
-			.content img:nth-child(6n + 2n){
-				width: 50%;
-				color: yellow;
-			}
-			.content img:nth-child(6n + (2n-1)){
-				width: 50%;
-				color: orange;
 			}
 			/*.content__photo1{
 				background-image: url(img/photo/1-1.jpg);
@@ -88,9 +79,15 @@ html { overflow-x: hidden; }
 /* img hover button */
 	.holder{
 position:relative;
-width: 30%;
+width: 30.7%;
 display: inline-block;
+margin-right: 2.2%;
+margin-bottom: 2.2%;
 }
+.h7,.h8{
+	width: 47.4%;
+}
+
 .block{
 position:absolute;
 left:0;
@@ -103,7 +100,7 @@ display:none;
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	background-color: black;
+	background-color: #2F3541;
 	z-index: 10;
 	display: none;
 }
@@ -118,7 +115,75 @@ display:none;
 		cursor: pointer;
 		z-index: 8;
 	}
+	.index_form{
+		padding:30px 30px 0 30px;
+	}
+	.index_form h2{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		line-height: 46px;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+
+		color: #FFFFFF;
+		width: 60%;
+	}
+	.index_form p{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 26px;
+
+		color: #FFFFFF;
+		width: 80%;
+	}
+	.index_form input{
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		padding: 21px 45px 15px 20px;
+	}
 /* modal window */
+
+/* slider 
+	#slider_button_left{
+		width: 60px;
+		height: 60px;
+		background-image: url(img/left.png);
+		background-color: pink;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 26px;
+		display: none;
+	}
+	#slider_button_right{
+		width: 60px;
+		height: 60px;
+		background-image: url(img/right.png);
+		background-color: yellow;
+		margin: 0;
+		position: absolute;
+		top: 70px;
+		display: none;
+	}
+	#slider_button_left:hover{
+		width: 60px;
+		height: 60px;
+		background-image: url(img/left_activ.png);
+	}
+	#slider_button_right:hover{
+		width: 60px;
+		height: 60px;
+		background-image: url(img/right_activ.png);
+	}
+
+ */
+
+ .slider_buttons{
+ 	display: none;
+ }
 
 
 @media only screen and (max-width:570px){
