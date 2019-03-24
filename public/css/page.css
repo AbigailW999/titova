@@ -21,7 +21,7 @@ html { overflow-x: hidden; }
 		
 	}
 	.about_me_box2{
-		width: 70%;
+		width: 73%;
 	}
 		h1{
 			font-family: Forum;
@@ -55,14 +55,15 @@ html { overflow-x: hidden; }
 			color: #2F3541;
 		}
 		.daria{
-			position: absolute;
-			right: -113px;
+			position: fixed;
+			left: 80%;
 			top:0px;
 			height: 100%;
 		}
 		ul{
     		list-style-image: url(../img/list.png);
     		margin-top: 30px;
+    		margin-left: -20px;
    		  }
 			li{
 				font-family: Forum;
@@ -353,14 +354,37 @@ html { overflow-x: hidden; }
 	}
 /* single page note end */
 
-@media only screen and (max-width:570px){
+@media only screen and (max-width:670px){
 	
 }
-@media only screen and (min-width:571px) and (max-width:992px){
-	
+@media only screen and (min-width:671px) and (max-width:1020px){
+	.menu{
+		padding-bottom: 50px;
+		border:0;
+		border-bottom: 1px solid #E5E5E5;
+	}
+	.content_box{
+		margin: 50px 50px 0 50px;
+	}
+	.note_box,.single_n_box,.date_single_note,.content,.contact_box{
+	    margin: 0;
+	}
+	.contact_box{
+		margin-top: 22%;
+	}
+	.daria{
+		position: absolute;
+		left: 63.5%;
+		top:140px;
+		height: 140%;
+	}
+	.about_me_box2{
+		width: 62%;
+	}
+
 }
 
-@media only screen and (min-width:993px) and (max-width:1560px){
+@media only screen and (min-width:1021px) and (max-width:1560px){
 
 }
 

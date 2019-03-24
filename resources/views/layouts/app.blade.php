@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!--<title>{{ config('app.name', 'titova') }}</title>-->
+    <title>Titova</title>
 
     <!-- Favicon -->
      <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
@@ -27,12 +28,13 @@
 </head>
 <body>
         <div class="menu">
-            <a href="{{asset('/')}}"><img src="{{ asset('img/logo.svg') }}" alt="DARIA TITOVA"></a>
+            <a href="{{asset('/')}}" class="logo_img"><img src="{{ asset('img/logo.svg') }}" alt="DARIA TITOVA"></a>
                 <div class="menu__menu-links">
                     <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('about_me')}}">ОБО МНЕ</a></div>
                     <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('notes')}}">ЗАМЕТКИ</a></div>
                     <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('price')}}">ЦЕНЫ</a></div>
-                    <div><img src="{{ asset('img/vector.png') }}"><a href="{{asset('contact')}}">КОНТАКТЫ</a></div>
+                    <div><img src="{{ asset('img/vector.png') }}"><a class="contact_link" href="{{asset('contact')}}">КОНТАКТЫ</a></div>
+                    <div class="invisible">Instagram</div>
                 </div>
             <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
         </div>

@@ -13,22 +13,22 @@ class MessageController extends Controller
     	$obj->photo_id = $id;
     	$obj->contact = $_POST['contact'];
     	$obj->save();
-    	$email = 'sansa9991@gmail.com';
+    	$email = 'titova123@gmail.com';
     	$tema = 'Заказать прическу';
-    	$body = $_POST['contact'];
-    	$headers = 'Сообщение от:';
-    	@mail($email, $tema, $body, $headers);
+    	$body = 'Контакт пользователя:'.$_POST['contact'].' ID фото:'.$id;
+    	$headers = '';
+    	@mail('Сообщение от:'.$email, $tema, $body, $headers);
     	return redirect('/');
 	}
 
 	public function postContact(MessageRequest $request){
     	 $request = $this->saveFiles($request);
 		Message::create($request->all());
-		$email = 'sansa9991@gmail.com';
+		$email = 'titova123@gmail.com';
     	$tema = 'Заказать прическу';
-    	$body = $_POST['contact'].'<br>'.$request->name.'<br>'.$request->description.'<br>'.$request->picture;
-    	$headers = 'Сообщение от:';
-    	@mail($email, $tema, $body, $headers);
+    	$body = ' Контакт пользователя:'.$_POST['contact'].' Имя:'.$request->name.' Описание:'.$request->description.' Название картинки'.$request->picture;
+    	$headers = '';
+    	@mail('Сообщение от:'.$email, $tema, $body, $headers);
     	return redirect('/');
 	}
 }

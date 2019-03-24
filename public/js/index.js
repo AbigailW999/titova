@@ -63,3 +63,196 @@ $(function () {
 //img form end
 
 
+//slider
+$(function () {
+   
+   $('.photo').bind('click', function(){
+   		var id = $(this).attr("data-id2");
+   		var windowWidth = window.innerWidth;
+		var windowHeight = window.innerHeight;
+
+	   		$('.h'+id).css(
+	    	{'position': 'fixed',
+	    	'top':'0',
+	    	'left':'0',
+	    	'width':windowWidth,
+	    	'height':windowHeight,
+	    	'zIndex':'100', 
+	    	'backgroundColor':'white',
+	    	}
+		);
+   		$('#ph'+id).css(
+	    	{'width': 'auto',
+	    	'height': windowHeight}
+		);
+
+   		var img_width2 = $('#ph'+id).width();
+   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
+   		$('#ph'+id).css(
+	    	{'marginLeft': margi_left_img_slider}
+		);
+		$('#'+id).css(
+	    	{'marginLeft': margi_left_img_slider}
+		);
+		var margi_left_img_button = (margi_left_img_slider+img_width2)-65;
+		$('.img_button').css(
+	    	{'left': margi_left_img_button}
+		);
+		var top_for_but = (windowHeight/2)-30;
+		$('#butL'+id).css(
+	    	{'display': 'block',
+	    	'width': '60px',
+	    	'height':'60px',
+	    	'position':'absolute',
+	    	'left':'26px',
+	    	'top': top_for_but,
+	    	'backgroundImage':'url(/img/left.png)'
+	    	}
+		);
+		$('#butL'+id).hover(function() {
+		  	$(this).css({
+		  	'backgroundImage':'url(/img/left_activ.png)'
+			  });
+			},
+		function() {
+			$(this).css({
+			  	'backgroundImage':'url(/img/left.png)'
+			});
+		});
+
+
+		$('#butR'+id).css(
+	    	{'display': 'block',
+	    	'width': '60px',
+	    	'height':'60px',
+	    	'position':'absolute',
+	    	'top': top_for_but,
+	    	'right':'26px',
+	    	'backgroundImage':'url(/img/right.png)'
+	    	}
+		);
+		$('#butR'+id).hover(function() {
+		  	$(this).css({
+		  	'backgroundImage':'url(/img/right_activ.png)'
+			  });
+			},
+		function() {
+			$(this).css({
+			  	'backgroundImage':'url(/img/right.png)'
+			});
+		});
+
+
+
+
+
+
+		$('#butR'+id).bind('click', function(){
+			id = +id+1;
+			
+
+
+
+		var windowWidth = window.innerWidth;
+		var windowHeight = window.innerHeight;
+
+   		$('.h'+id).css(
+	    	{'position': 'fixed',
+	    	'top':'0',
+	    	'left':'0',
+	    	'width':windowWidth,
+	    	'height':windowHeight,
+	    	'zIndex':'100', 
+	    	'backgroundColor':'white',
+	    	}
+		);
+   		$('#ph'+id).css(
+	    	{'width': 'auto',
+	    	'height': windowHeight}
+		);
+
+   		var img_width2 = $('#ph'+id).width();
+   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
+   		$('#ph'+id).css(
+	    	{'marginLeft': margi_left_img_slider}
+		);
+		$('#'+id).css(
+	    	{'marginLeft': margi_left_img_slider}
+		);
+		var margi_left_img_button = (margi_left_img_slider+img_width2)-65;
+		$('.img_button').css(
+	    	{'left': margi_left_img_button}
+		);
+		var top_for_but = (windowHeight/2)-30;
+		$('#butL'+id).css(
+	    	{'display': 'block',
+	    	'width': '60px',
+	    	'height':'60px',
+	    	'position':'absolute',
+	    	'left':'26px',
+	    	'top': top_for_but,
+	    	'backgroundImage':'url(/img/left.png)'
+	    	}
+		);
+		$('#butL'+id).hover(function() {
+		  	$(this).css({
+		  	'backgroundImage':'url(/img/left_activ.png)'
+			  });
+			},
+		function() {
+			$(this).css({
+			  	'backgroundImage':'url(/img/left.png)'
+			});
+		});
+
+
+		$('#butR'+id).css(
+	    	{'display': 'block',
+	    	'width': '60px',
+	    	'height':'60px',
+	    	'position':'absolute',
+	    	'top': top_for_but,
+	    	'right':'26px',
+	    	'backgroundImage':'url(/img/right.png)'
+	    	}
+		);
+		$('#butR'+id).hover(function() {
+		  	$(this).css({
+		  	'backgroundImage':'url(/img/right_activ.png)'
+			  });
+			},
+		function() {
+			$(this).css({
+			  	'backgroundImage':'url(/img/right.png)'
+			});
+		});
+
+		
+
+		});
+
+	});
+});
+
+//slider end
+
+
+//adaptiv
+$(function () {
+	function mediaSize() {
+		if (window.matchMedia('(min-width:671px) and (max-width:1020px)').matches){
+			var offset = $('.contact_link').offset();
+			var inst_link_left = offset.left + 125;
+			console.log(inst_link_left);
+		    $('.menu__instagram').css({'left': inst_link_left});
+
+		    $('.logo_img').html('<img src="img/logo2.png" alt="DARIA TITOVA">');
+		    
+		};
+	};
+
+	mediaSize();
+	window.addEventListener('resize', mediaSize, false);  
+});
+//adaptiv end
+

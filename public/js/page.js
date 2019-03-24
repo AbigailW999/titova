@@ -1,6 +1,5 @@
 $(function () {
-	//alert( window.innerWidth );
-	//alert( window.innerHeight );
+	
 	/* upload input value */
 	$('.contact_upload_container input').on('change', function() {
 		var splittedFakePath = this.value.split('\\');
