@@ -355,11 +355,41 @@ html { overflow-x: hidden; }
 /* single page note end */
 
 @media only screen and (max-width:670px){
-	
+	.menuWrapper {
+	   border-bottom: 1px solid #E5E5E5;
+	   padding-bottom: 30px;
+	}
+	.content{
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+	.content_box{
+		margin: 0;
+		margin-top: 30px;
+		width: 100%;
+	}	
+	.single_n_box,.about_me_box2,.note_box{
+		margin: 0px;
+	}
+	.contact_box{
+		margin-top: 22%;
+	}
+	.form__field {
+	  width: 302px;
+	 }
+	.daria{
+		position: static;
+		width: 100%;
+		margin-bottom: -35px; 
+	}
+	.about_me_box2{
+		width: 100%;
+	}
+
 }
 @media only screen and (min-width:671px) and (max-width:1020px){
 	.menu{
-		padding-bottom: 50px;
+		padding-bottom: 40px;
 		border:0;
 		border-bottom: 1px solid #E5E5E5;
 	}
