@@ -67,7 +67,7 @@ $(function () {
 $(function () {
 
 	 
-	 $('.closeButton').bind('click', function(){
+	 $('.closeButton').on('click', function(){
 		  $(".modal").css(
 	    	{'display': 'none'}
 			);
@@ -76,7 +76,7 @@ $(function () {
 			);
 	});
 
-	$('.img_button').bind('click', function(){
+	$('.img_button').on('click', function(){
 		var id = $(this).attr("data-id");
 		var img_width = $('#ph'+id).width();
 		var img_height = $('#ph'+id).height();
@@ -84,9 +84,10 @@ $(function () {
 		$('#'+id).css(
 	    	{'display': 'block','width': img_width, 'height': img_height}
 			);
-		  $(".img_button").css(
+		  $('.img_button').css(
 	    	{'display': 'none'}
 			);
+
 	});
 
 });
@@ -113,9 +114,12 @@ $(function SliderStart() {
 	    	'width':windowWidth,
 	    	'height':windowHeight,
 	    	'zIndex':'100', 
-	    	'backgroundColor':'white',
+	    	'backgroundColor':'white'
 	    	}
 		);
+
+	   	$('html').css({'overflow-y':'hidden'});
+
    		$('#ph'+id).css(
 	    	{'width': 'auto',
 	    	'height': windowHeight}
@@ -129,10 +133,11 @@ $(function SliderStart() {
 		$('#'+id).css(
 	    	{'marginLeft': margi_left_img_slider}
 		);
-		var margi_left_img_button = (margi_left_img_slider+img_width2)-65;
-		$('.img_button').css(
+		var margi_left_img_button = (margi_left_img_slider+img_width2)-75;
+		$('.block').css(
 	    	{'left': margi_left_img_button}
 		);
+		//$('.block').css({'left': margi_left_img_button,'bottom':'15px'});
 
 		$('.slider_buttons_boxL, .slider_buttons_boxR, .slider_close_but').css({
 			'display':'flex',
@@ -255,8 +260,11 @@ $(function () {
 			var offset = $('.contact_link').offset();
 			var inst_link_left = offset.left + 125;
 		    $('.menu__instagram').css({'left': inst_link_left});
-		    $('.logo_img').html('<img src="img/logo2.png" alt="DARIA TITOVA">');
+		    $('.logo_img').html('<img src="img/logo2.svg" alt="DARIA TITOVA">');
+		} else {
+			
 		};
+
 		if (window.matchMedia('(max-width:670px)').matches){
 			
 		};

@@ -32,7 +32,7 @@
 
 			<div class="contact_upload_container">
 				<input id="file-input" type="file" name="picture" accept="image/*" multiple>
-			    <label for="file-input"><img src="../img/upload.png">Прикрепить файл</label>
+			    <label for="file-input"><img src="img/upload.svg">Прикрепить файл</label>
 			    <div class="contact_form_file-name"></div>
 			</div>
 			<input type="submit" name="send" value="Отправить сообщение" class="contact_form_button">
