@@ -414,10 +414,16 @@ html { overflow-x: hidden; }
 
 }
 
-@media only screen and (min-width:1021px) and (max-width:1560px){
+@media only screen and (min-width:1021px) and (max-width:1900px){
 
 }
 
-@media only screen and (min-width:1561px){
-	
+@media only screen and (min-width:1901px){
+
+	.daria{
+		left: 65%;
+	}
+	.about_me_box2{
+		width: 700px;
+	}
 }

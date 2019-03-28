@@ -66,7 +66,6 @@ html { overflow-x: hidden; }
 			margin-right: 5.5px;
 			visibility: hidden;
 		}
-
 		.invisible{
 			display: none;
 			color: white;
@@ -131,13 +130,19 @@ html { overflow-x: hidden; }
 	}
 /* img hover button end */
 
-
+/* index form */
 	.img_button{
 		position: absolute;
 		right: 15px;
 		bottom:15px;
 		cursor: pointer;
 		z-index: 8;
+	}
+	.closeButton{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
 	}
 	.index_form{
 		padding:30px 30px 0 30px;
@@ -152,7 +157,7 @@ html { overflow-x: hidden; }
 		text-transform: uppercase;
 
 		color: #FFFFFF;
-		width: 60%;
+		width: 70%;
 	}
 	.index_form p{
 		font-family: Forum;
@@ -160,15 +165,45 @@ html { overflow-x: hidden; }
 		font-weight: normal;
 		font-size: 20px;
 		line-height: 26px;
-
-		color: #FFFFFF;
+		color: rgba(255, 255, 255, 0.5);
 		width: 80%;
 	}
 	.index_form input{
 		border: 1px solid rgba(255, 255, 255, 0.5);
-		padding: 21px 45px 15px 20px;
+		height: 60px;
+		padding-left: 20px;
+		background-color: #2F3541;
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 24px;
+
+		color: rgba(255, 255, 255, 0.5);
+		width: 97%;
+		box-sizing: border-box;
+
+		margin-bottom: 25px;
+		margin-top: 30px;
 	}
-/* modal window */
+	.index_form button{
+		font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			line-height: normal;
+			font-size: 12px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: rgba(47, 53, 65, 0.5);
+			background-color: #E5E5E5;
+			height: 60px;
+			border:0;
+			cursor: pointer;
+			width: 97%;
+		box-sizing: border-box;
+	}
+
+/* index form end */
 
 /* slider 
 	#slider_button_left{
@@ -204,8 +239,53 @@ html { overflow-x: hidden; }
 	}
 
  */
- .slider_buttons{
+
+ .slider_buttons_boxL{
  	display: none;
+ 	left: 0;
+ 	top: 0;
+ 	width: 112px;
+ 	height: 100%;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	align-items: center;
+ 	z-index: 100;
+ }
+ .slider_buttons_boxR{
+ 	display: none;
+ 	top: 0;
+ 	right: 0;
+ 	width: 112px;
+ 	height: 100%;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	align-items: center;
+ 	z-index: 100;
+ }
+#butL{
+	background-image: url(/img/left.png);
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+#butL:hover{
+	background-image:url(/img/left_activ.png);
+}
+#butR{
+	background-image: url(/img/right.png);
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+#butR:hover{
+	background-image: url(/img/right_activ.png);
+}
+ .slider_close_but{
+ 	display: none;
+ 	top:40px;
+ 	right: 40px;
+ 	cursor: pointer;
+ 	z-index: 100;
  }
 
 
@@ -341,16 +421,51 @@ html { overflow-x: hidden; }
 		margin-top: 20px;
 		margin-left: 2.2%;
 	}
+
+
+	.index_form{
+		padding:30px 30px 0 30px;
+	}
+	.index_form h2{
+
+		font-size: 27px;
+		line-height: 36px;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		width: 90%;
+	}
+	.index_form p{
+		font-size: 18px;
+		line-height: 24px;
+		width: 90%;
+	}
+	.index_form input{
+		font-size: 18px;
+		line-height: 24px;
+		width: 97%;
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+	.index_form button{
+		font-size: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		width: 97%;
+	}
+
+
+
 }
 
-@media only screen and (min-width:1021px) and (max-width:1560px){
-	body{
-		background-color: pink;
-	}
+@media only screen and (min-width:1021px) and (max-width:1900px){
+
 }
 
-@media only screen and (min-width:1561px){
-	body{
-		background-color: green;
+@media only screen and (min-width:1901px){
+	.menu{
+		padding: 69.2px 7.2% 0 7.8%;
 	}
+	.content{
+			margin: 35px 4.2% 0 19.3%;
+		}
 }

@@ -6,9 +6,7 @@
     @endphp
     @foreach($name_photo as $one)
         <div class="holder h{{$a}}">
-
-            <div id="butL{{$a}}" class="slider_buttons"></div>
-            <div id="butR{{$a}}" class="slider_buttons"></div>
+            
 
             <div id="a{{$a}}">
                 <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}" data-id2="{{$a}}">
@@ -23,9 +21,8 @@
                         <p>Оставьте ваши контакты и я свяжусь вами в ближайшее время =)</p>
                         <input type="text" name="contact" placeholder="Ваш телефон или email"><br>
                         <button type="submit">Отправить</button><br>
-                        
                     </form>
-                    <button class="closeButton">Закрыть</button>
+                    <img class="closeButton" src="img/form_close_but.png">
                 </div>
             
         </div>
@@ -33,5 +30,11 @@
         $a++;
         @endphp
     @endforeach
-
+    <div class="slider_buttons_boxL">
+        <div id="butL" class="slider_buttons"></div>
+    </div>
+    <div class="slider_buttons_boxR">
+        <div id="butR" class="slider_buttons"></div>
+    </div>
+    <a href="{{asset('/')}}"><img src="img/slider_close_but.png" class="slider_close_but"></a>
 @endsection

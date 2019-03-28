@@ -1,3 +1,6 @@
+var id_Glob = 0;
+var photo_amount = $('.holder').length; 
+
 //active menu items
 
 $(function () {
@@ -37,7 +40,7 @@ $(function () {
 	$('#menu_links_mobile div').each(function () {
         var link2 = $(this).find('a').attr('href');
         var link3 = '/' + link2.split('/').pop();
- 		console.log('WORK');
+
  		if (cur_url2 == "/contact_form?") {
  			cur_url2 = "/contact";
 	 		if (cur_url2 == link3){
@@ -77,7 +80,6 @@ $(function () {
 		var id = $(this).attr("data-id");
 		var img_width = $('#ph'+id).width();
 		var img_height = $('#ph'+id).height();
-		console.log(img_height);
 
 		$('#'+id).css(
 	    	{'display': 'block','width': img_width, 'height': img_height}
@@ -92,13 +94,15 @@ $(function () {
 //img form end
 
 
-//slider
-$(function () {
+//SLIDER console.log('id_Glob = '+id_Glob);
+
+$(function SliderStart() {
    
-   $('.photo').bind('click', function(){//Открытие слайдера по нажатию на фотографию
+   $('.photo').on('click', function(){//Открытие слайдера по нажатию на фотографию
 
    		//Начало стилей для открытия слайдера с первой фоткой
    		var id = $(this).attr("data-id2");
+   		id_Glob = id;
    		var windowWidth = window.innerWidth;
 		var windowHeight = window.innerHeight;
 
@@ -129,221 +133,119 @@ $(function () {
 		$('.img_button').css(
 	    	{'left': margi_left_img_button}
 		);
-		var top_for_but = (windowHeight/2)-30;
-		$('#butL'+id).css(
-	    	{'display': 'block',
-	    	'width': '60px',
-	    	'height':'60px',
-	    	'position':'absolute',
-	    	'left':'26px',
-	    	'top': top_for_but,
-	    	'backgroundImage':'url(/img/left.png)'
-	    	}
-		);
-		$('#butL'+id).hover(function() {
-		  	$(this).css({
-		  	'backgroundImage':'url(/img/left_activ.png)'
-			  });
-			},
-		function() {
-			$(this).css({
-			  	'backgroundImage':'url(/img/left.png)'
-			});
+
+		$('.slider_buttons_boxL, .slider_buttons_boxR, .slider_close_but').css({
+			'display':'flex',
+			'position':'fixed'
 		});
-
-
-		$('#butR'+id).css(
-	    	{'display': 'block',
-	    	'width': '60px',
-	    	'height':'60px',
-	    	'position':'absolute',
-	    	'top': top_for_but,
-	    	'right':'26px',
-	    	'backgroundImage':'url(/img/right.png)'
-	    	}
-		);
-		$('#butR'+id).hover(function() {
-		  	$(this).css({
-		  	'backgroundImage':'url(/img/right_activ.png)'
-			  });
-			},
-		function() {
-			$(this).css({
-			  	'backgroundImage':'url(/img/right.png)'
-			});
-		});
-
 
 		//Конец стилей для открытия слайдера с первой фоткой
-
-
-
-		$('#butR'+id).bind('click', function(){ //функция нажатия на правую кнопку
-			id = +id+1;
-			//стили для открытия слайдера с первой фоткой (такие же как в начале)
-			var windowWidth = window.innerWidth;
-			var windowHeight = window.innerHeight;
-
-	   		$('.h'+id).css(
-		    	{'position': 'fixed',
-		    	'top':'0',
-		    	'left':'0',
-		    	'width':windowWidth,
-		    	'height':windowHeight,
-		    	'zIndex':'100', 
-		    	'backgroundColor':'white',
-		    	}
-			);
-	   		$('#ph'+id).css(
-		    	{'width': 'auto',
-		    	'height': windowHeight}
-			);
-
-	   		var img_width2 = $('#ph'+id).width();
-	   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
-	   		$('#ph'+id).css(
-		    	{'marginLeft': margi_left_img_slider}
-			);
-			$('#'+id).css(
-		    	{'marginLeft': margi_left_img_slider}
-			);
-			var margi_left_img_button = (margi_left_img_slider+img_width2)-65;
-			$('.img_button').css(
-		    	{'left': margi_left_img_button}
-			);
-			var top_for_but = (windowHeight/2)-30;
-			$('#butL'+id).css(
-		    	{'display': 'block',
-		    	'width': '60px',
-		    	'height':'60px',
-		    	'position':'absolute',
-		    	'left':'26px',
-		    	'top': top_for_but,
-		    	'backgroundImage':'url(/img/left.png)'
-		    	}
-			);
-			$('#butL'+id).hover(function() {
-			  	$(this).css({
-			  	'backgroundImage':'url(/img/left_activ.png)'
-				  });
-				},
-			function() {
-				$(this).css({
-				  	'backgroundImage':'url(/img/left.png)'
-				});
-			});
-
-
-			$('#butR'+id).css(
-		    	{'display': 'block',
-		    	'width': '60px',
-		    	'height':'60px',
-		    	'position':'absolute',
-		    	'top': top_for_but,
-		    	'right':'26px',
-		    	'backgroundImage':'url(/img/right.png)'
-		    	}
-			);
-			$('#butR'+id).hover(function() {
-			  	$(this).css({
-			  	'backgroundImage':'url(/img/right_activ.png)'
-				  });
-				},
-			function() {
-				$(this).css({
-				  	'backgroundImage':'url(/img/right.png)'
-				});
-			});
-
-		});
-
-
-
-
-		$('#butL'+id).bind('click', function(){ //функция нажатия на левую кнопку
-
-			id = +id-1;
-			//стили для открытия слайдера с первой фоткой (такие же как в начале)
-			var windowWidth = window.innerWidth;
-			var windowHeight = window.innerHeight;
-
-	   		$('.h'+id).css(
-		    	{'position': 'fixed',
-		    	'top':'0',
-		    	'left':'0',
-		    	'width':windowWidth,
-		    	'height':windowHeight,
-		    	'zIndex':'100', 
-		    	'backgroundColor':'white',
-		    	}
-			);
-	   		$('#ph'+id).css(
-		    	{'width': 'auto',
-		    	'height': windowHeight}
-			);
-
-	   		var img_width2 = $('#ph'+id).width();
-	   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
-	   		$('#ph'+id).css(
-		    	{'marginLeft': margi_left_img_slider}
-			);
-			$('#'+id).css(
-		    	{'marginLeft': margi_left_img_slider}
-			);
-			var margi_left_img_button = (margi_left_img_slider+img_width2)-65;
-			$('.img_button').css(
-		    	{'left': margi_left_img_button}
-			);
-			var top_for_but = (windowHeight/2)-30;
-			$('#butL'+id).css(
-		    	{'display': 'block',
-		    	'width': '60px',
-		    	'height':'60px',
-		    	'position':'absolute',
-		    	'left':'26px',
-		    	'top': top_for_but,
-		    	'backgroundImage':'url(/img/left.png)'
-		    	}
-			);
-			$('#butL'+id).hover(function() {
-			  	$(this).css({
-			  	'backgroundImage':'url(/img/left_activ.png)'
-				  });
-				},
-			function() {
-				$(this).css({
-				  	'backgroundImage':'url(/img/left.png)'
-				});
-			});
-
-
-			$('#butR'+id).css(
-		    	{'display': 'block',
-		    	'width': '60px',
-		    	'height':'60px',
-		    	'position':'absolute',
-		    	'top': top_for_but,
-		    	'right':'26px',
-		    	'backgroundImage':'url(/img/right.png)'
-		    	}
-			);
-			$('#butR'+id).hover(function() {
-			  	$(this).css({
-			  	'backgroundImage':'url(/img/right_activ.png)'
-				  });
-				},
-			function() {
-				$(this).css({
-				  	'backgroundImage':'url(/img/right.png)'
-				});
-			});
-
-		});
+		ButtonR();
+		ButtonL();
 
 	});
 });
 
-//slider end
+//buttonR
+
+function ButtonR(){
+
+
+	$('#butR').on('click', function(){ //функция нажатия на правую кнопку
+			var id_prev = +id_Glob;
+			var id_next = +id_Glob+1;
+			if (id_next == +photo_amount+1) {
+				id_next = 1;
+			}
+		//close prev
+		$('.h'+id_prev).css({
+			'display':'none'
+		});
+			//open next
+			var windowWidth = window.innerWidth;
+			var windowHeight = window.innerHeight;
+
+	   		$('.h'+id_next).css(
+		    	{'display':'block',
+		    	'position': 'fixed',
+		    	'top':'0',
+		    	'left':'0',
+		    	'width':windowWidth,
+		    	'height':windowHeight,
+		    	'zIndex':'100', 
+		    	'backgroundColor':'white',
+		    	}
+			);
+	   		$('#ph'+id_next).css(
+		    	{'width': 'auto',
+		    	'height': windowHeight}
+			);
+
+	   		var img_width2 = $('#ph'+id_next).width();
+	   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
+	   		$('#ph'+id_next).css(
+		    	{'marginLeft': margi_left_img_slider}
+			);
+			$('#'+id_next).css(
+		    	{'marginLeft': margi_left_img_slider}
+			);
+
+		id_Glob = +id_next;
+		console.log(id_Glob+' RIGHT');	
+	});
+	
+};
+//buttonL
+function ButtonL(){
+
+	
+	$('#butL').on('click', function(){ //функция нажатия на левую кнопку
+				
+			var id_prev_L = +id_Glob;
+			var id_next_L = +id_Glob-1;
+			if (id_next_L == 0) {
+				id_next_L = photo_amount;
+			}
+			//close prev
+			$('.h'+id_prev_L).css({
+				'display':'none'
+			});
+				//open next
+			var windowWidth = window.innerWidth;
+			var windowHeight = window.innerHeight;
+
+	   		$('.h'+id_next_L).css(
+		    	{'display':'block',
+		    	'position': 'fixed',
+		    	'top':'0',
+		    	'left':'0',
+		    	'width':windowWidth,
+		    	'height':windowHeight,
+		    	'zIndex':'100', 
+		    	'backgroundColor':'white',
+		    	}
+			);
+	   		$('#ph'+id_next_L).css(
+		    	{'width': 'auto',
+		    	'height': windowHeight}
+			);
+
+	   		var img_width2 = $('#ph'+id_next_L).width();
+	   		var margi_left_img_slider = (windowWidth/2)-(img_width2/2);
+	   		$('#ph'+id_next_L).css(
+		    	{'marginLeft': margi_left_img_slider}
+			);
+			$('#'+id_next_L).css(
+		    	{'marginLeft': margi_left_img_slider}
+			);
+			
+			id_Glob = +id_next_L;
+		});
+	
+};
+
+
+//SLIDER END
 
 
 //adaptiv
