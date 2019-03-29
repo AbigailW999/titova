@@ -61,7 +61,7 @@ html { overflow-x: hidden; }
 			height: 100%;
 		}
 		ul{
-    		list-style-image: url(img/list.svg);
+    		list-style-image: url(../img/list.svg);
     		margin-top: 30px;
     		margin-left: -20px;
    		  }
@@ -75,6 +75,17 @@ html { overflow-x: hidden; }
 				padding-left: 15px;
 				padding-bottom: 20px;/*????*/
 			}
+		.about_me_phone{
+			font-family: Forum;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 25px;
+			line-height: 33px;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #2F3541;
+		}
 /* about_me end */
 
 /* contact */

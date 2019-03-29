@@ -105,7 +105,7 @@ html { overflow-x: hidden; }
 	margin-right: 2.2%;
 	margin-bottom: 2.2%;
 	}
-	.h7,.h8{
+	.h7,.h8,.h15,.h16{
 		width: 47.4%;
 	}
 
@@ -257,6 +257,32 @@ html { overflow-x: hidden; }
  	cursor: pointer;
  	z-index: 100;
  }
+
+.phot_makeup div{
+	font-family: Forum;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: rgba(47, 53, 65, 0.5);
+	z-index: 100;
+}
+
+.phot_makeup a{
+	text-decoration: none;
+	font-family: Forum;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: rgba(47, 53, 65, 0.5);
+	border-bottom: 1px solid #E5E5E5
+}
+.phot_makeup{
+	display: none;
+}
 
 /* SLIDER end */
 

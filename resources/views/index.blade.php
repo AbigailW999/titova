@@ -6,8 +6,10 @@
     @endphp
     @foreach($name_photo as $one)
         <div class="holder h{{$a}}">
-            
-
+            <div class="phot_makeup" id="per{{$a}}">
+                <div>Фотограф - {!! $one->photographer !!}</div>
+                <div>Макияж - {!! $one->makeup !!}</div>
+            </div>
             <div id="a{{$a}}">
                 <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}" data-id2="{{$a}}">
             </div>
