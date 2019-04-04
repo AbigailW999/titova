@@ -11,7 +11,7 @@
                 <div>Макияж - {!! $one->makeup !!}</div>
             </div>
             <div id="a{{$a}}">
-                <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}" data-id2="{{$a}}">
+                <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}" data-id2="{{$a}}" alt="прическа {{$a}}">
             </div>
                 <div class="block">
                     <img src="{{ asset('img/want_it.svg')}}" data-id="{{$a}}" class="img_button">

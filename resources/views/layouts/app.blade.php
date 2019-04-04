@@ -41,15 +41,15 @@
         <a href="{{asset('/')}}" class="logo_img_mobile"><img src="{{ asset('img/logo2.svg') }}" alt="DARIA TITOVA"></a>
         <div class="menuWrapper">
             <div class="menuLimiter">
-            <img src="img/left_grad.svg" class="grad_left">
-            <img src="img/right_grad.svg" class="grad_right">
+            <img src="/img/left_grad.svg" class="grad_left">
+            <img src="/img/right_grad.svg" class="grad_right">
                 <div class="menu_mobile">
                         <div class="menu__menu-links" id="menu_links_mobile">
                             <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('about_me')}}">ОБО МНЕ</a></div>
                             <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('notes')}}">ЗАМЕТКИ</a></div>
                             <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('price')}}">ЦЕНЫ</a></div>
                             <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('contact')}}">КОНТАКТЫ</a></div>
-                            <div><a href="https://www.instagram.com/titova_wow/">Instagram</a></div>
+                            <div><a id="inst_link_mobile" href="https://www.instagram.com/titova_wow/">Instagram</a></div>
                         </div>
                 </div>
             </div>

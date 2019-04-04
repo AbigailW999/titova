@@ -49,6 +49,9 @@ html { overflow-x: hidden; }
 			color: rgba(47, 53, 65, 0.5);
 			padding-bottom: 10px;
 		}
+		.menu__menu-links a:hover{
+			color:  #2F3541;
+		}
 		.menu__instagram{
 			text-decoration: none;
 			display: block;
@@ -60,7 +63,9 @@ html { overflow-x: hidden; }
 			width: 72px;
 			height: 24px;
 			border-bottom: 1px solid #C4C4C4;
-			
+		}
+		.menu__instagram:hover{
+			color: rgba(47, 53, 65, 0.5);
 		}
 		.menu__menu-links img{
 			margin-right: 5.5px;
@@ -82,6 +87,7 @@ html { overflow-x: hidden; }
 			.photo{
 				width: 100%;
 				z-index: 7;
+				cursor: pointer;
 			}
 			/*.content__photo1{
 				background-image: url(img/photo/1-1.jpg);
@@ -108,6 +114,7 @@ html { overflow-x: hidden; }
 	.h7,.h8,.h15,.h16{
 		width: 47.4%;
 	}
+
 
 	.block{
 		position:absolute;
@@ -191,6 +198,7 @@ html { overflow-x: hidden; }
 		margin-bottom: 25px;
 		margin-top: 30px;
 	}
+
 	.index_form button{
 		font-family: Roboto;
 			font-style: normal;
@@ -311,7 +319,7 @@ html { overflow-x: hidden; }
 	}
 	.menu__menu-links{
 		display: block;
-		width: 580px;
+		width: 590px;
 		margin: 0;
 		height: 29px;
 		margin-left: 15px;
@@ -324,14 +332,27 @@ html { overflow-x: hidden; }
 	.menu__menu-links a{
 		z-index: 9;
 	}
-
-
+	#inst_link_mobile{
+		font-family: Forum;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 24px;
+		text-transform: none;
+		letter-spacing: 0;
+		border-bottom: 1px solid #C4C4C4;
+		color: #2F3541;
+		padding-bottom: 2.5px;
+	}
+	#inst_link_mobile:hover{
+		color: rgba(47, 53, 65, 0.5);
+	}
 	.menuLimiter{
 	  width: 100%;
 	  overflow-x: scroll;
 	  -webkit-overflow-scrolling: touch;
-	  margin-bottom: -20px;
-	  padding-bottom: 10px;
+	  margin-bottom: -15px;
+	  padding-bottom: 15px;
 	}
 	.menuWrapper {
 	   overflow: hidden;
@@ -460,6 +481,18 @@ html { overflow-x: hidden; }
     .menuWrapper{
     	display: none;
     }
+    .h7 form{
+		padding: 115px 115px 0 115px;
+	}
+	.h8 form{
+		padding: 115px 115px 0 115px;
+	}
+    .h15 form{
+		padding: 115px 115px 0 115px;
+	}
+    .h16 form{
+		padding: 115px 115px 0 115px;
+	}
 }
 
 @media only screen and (min-width:1901px){
@@ -469,4 +502,16 @@ html { overflow-x: hidden; }
 	.content{
 			margin: 35px 4.2% 0 19.3%;
 		}
+    .h7 form{
+		padding: 115px 115px 0 115px;
+	}
+	.h8 form{
+		padding: 115px 115px 0 115px;
+	}
+    .h15 form{
+		padding: 115px 115px 0 115px;
+	}
+    .h16 form{
+		padding: 115px 115px 0 115px;
+	}
 }

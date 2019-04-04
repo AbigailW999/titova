@@ -131,6 +131,10 @@ html { overflow-x: hidden; }
 	.contact_button{
 		cursor: pointer;
 	}
+	.contact_button:hover{
+		color: #2F3541;
+		border-color: rgba(47, 53, 65, 0.5);
+	}
 /* contact end */
 
 /* contact form */
@@ -141,6 +145,12 @@ html { overflow-x: hidden; }
 	.form__group {
 	  position: relative;
 	  padding: 0 0 25px;
+	}
+	.form__group input:hover{
+		border-color: rgba(47, 53, 65, 0.5);
+	}
+	textarea:hover{
+		border-color: rgba(47, 53, 65, 0.5);
 	}
 	#form__group_textarea{
 		padding-bottom: 0px;
@@ -211,12 +221,14 @@ html { overflow-x: hidden; }
 	}
 
 	.form__field:focus ~ .form__label {
-	  color: #FD4B4B;
+	  /*color: #FD4B4B;*/
+	  color: rgba(47, 53, 65, 0.5);
 	}
 
 	.form__field:focus {
 	  padding-bottom: 6px; 
-	  border: 1px solid #FD4B4B;
+	  /*border: 1px solid #FD4B4B; border*/
+	  border: 1px solid #E5E5E5;
 	}
 
 
@@ -339,6 +351,9 @@ html { overflow-x: hidden; }
 		border-bottom: 1px solid #E5E5E5;
 		color: #2F3541;
 	}
+	.notes_links:hover{
+		color: rgba(47, 53, 65, 0.5);
+	}
 	.note_link_box{
 		margin-bottom: 50px;
 	}
@@ -396,6 +411,10 @@ html { overflow-x: hidden; }
 	.about_me_box2{
 		width: 100%;
 	}
+	.content_404page-p{
+		margin-left:20px;
+		margin-right: 20px;
+	}
 
 }
 @media only screen and (min-width:671px) and (max-width:1020px){
@@ -437,4 +456,24 @@ html { overflow-x: hidden; }
 	.about_me_box2{
 		width: 700px;
 	}
+	.content_404page-p{
+		margin-top: 20%;
+	}
+}
+
+
+
+
+
+#form_message span.text-error {
+  position: absolute;
+  top: 18px;
+  margin-left: 30px;
+
+  font-family: Forum;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: #FD4B4B;
 }

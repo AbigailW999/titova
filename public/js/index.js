@@ -71,8 +71,8 @@ $(function () {
 		  $(".modal").css(
 	    	{'display': 'none'}
 			);
-		  $(".img_button").css(
-	    	{'display': 'block'}
+		  $('.block').css(
+	    	{'zIndex': '10'}
 			);
 	});
 
@@ -84,8 +84,8 @@ $(function () {
 		$('#'+id).css(
 	    	{'display': 'block','width': img_width, 'height': img_height}
 			);
-		  $('.img_button').css(
-	    	{'display': 'none'}
+		  $('.block').css(
+	    	{'zIndex': '-100'}
 			);
 
 	});
@@ -150,6 +150,15 @@ $(function SliderStart() {
 			'left': phot_makeup_left,
 			'bottom':'20px'
 		});
+		$('form').css({'padding':'30px 30px 0 30px'});
+
+		//key events
+		$(document).ready(function(){
+            $(window).keyup(function (event) {
+                if ( event.keyCode == 37 ) $('#butL').click(); //arrow left keyup
+                if ( event.keyCode == 39 )  $('#butR').click();//arrow right keyup
+            });
+        });
 
 		//Конец стилей для открытия слайдера с первой фоткой
 		ButtonR();
@@ -283,12 +292,9 @@ $(function () {
 		    $('.menu__instagram').css({'left': inst_link_left});
 		    $('.logo_img').html('<img src="img/logo2.svg" alt="DARIA TITOVA">');
 		} else {
-
+			$('.logo_img').html('<img src="img/logo.svg" alt="DARIA TITOVA">');
 		};
 
-		if (window.matchMedia('(max-width:670px)').matches){
-			
-		};
 	};
 
 	mediaSize();
