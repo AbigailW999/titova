@@ -286,7 +286,7 @@ function ButtonL(){
 //adaptiv
 $(function () {
 	function mediaSize() {
-		if (window.matchMedia('(min-width:671px) and (max-width:1020px)').matches){
+		if (window.matchMedia('(min-width:768px) and (max-width:1279px)').matches){
 			var offset = $('.contact_link').offset();
 			var inst_link_left = offset.left + 125;
 		    $('.menu__instagram').css({'left': inst_link_left});
@@ -302,3 +302,16 @@ $(function () {
 });
 //adaptiv end
 
+/* message form active button */
+
+function checkParams2() {
+    var em_ph2 = $('#index_form_input').val();
+    
+    if(em_ph2.length <= 5) {
+        $('#index_submit').attr('disabled', 'disabled');
+    } else {
+        $('#index_submit').removeAttr('disabled');
+    }
+}
+
+/* message form active button end */

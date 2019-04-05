@@ -6,9 +6,12 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Титова Дарья – стилист причесок в Минске. Индивидуальный стилист-парикмахер по созданию свадебных и вечерних причесок">
+    <meta name="keywords" content="прическа, стилист-парикмахер, парикмахер, свадебная прическа, вечерняя прическа, прическа Минск, прическа на дому">
+
 
     <!--<title>{{ config('app.name', 'titova') }}</title>-->
-    <title>Titova</title>
+    <title>Титова Дарья – стилист причесок</title>
 
     <!-- Favicon -->
      <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
@@ -30,13 +33,13 @@
         <div class="menu">
             <a href="{{asset('/')}}" class="logo_img"><img src="{{ asset('img/logo.svg') }}" alt="DARIA TITOVA"></a>
                 <div class="menu__menu-links">
-                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('about_me')}}">ОБО МНЕ</a></div>
-                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('notes')}}">ЗАМЕТКИ</a></div>
-                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('price')}}">ЦЕНЫ</a></div>
-                    <div><img src="{{ asset('img/activ_link.svg') }}"><a class="contact_link" href="{{asset('contact')}}">КОНТАКТЫ</a></div>
+                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('about_me')}}" title="Обо мне">ОБО МНЕ</a></div>
+                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('notes')}}" title="Заметки">ЗАМЕТКИ</a></div>
+                    <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('price')}}" title="Цены">ЦЕНЫ</a></div>
+                    <div><img src="{{ asset('img/activ_link.svg') }}"><a class="contact_link" href="{{asset('contact')}}" title="Контакты">КОНТАКТЫ</a></div>
                     <div class="invisible">Instagram</div>
                 </div>
-            <a class="menu__instagram" href="https://www.instagram.com/titova_wow/">Instagram</a>
+            <a class="menu__instagram" href="https://www.instagram.com/titova_wow/" title="Instagram">Instagram</a>
         </div>
         <a href="{{asset('/')}}" class="logo_img_mobile"><img src="{{ asset('img/logo2.svg') }}" alt="DARIA TITOVA"></a>
         <div class="menuWrapper">
@@ -45,11 +48,11 @@
             <img src="/img/right_grad.svg" class="grad_right">
                 <div class="menu_mobile">
                         <div class="menu__menu-links" id="menu_links_mobile">
-                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('about_me')}}">ОБО МНЕ</a></div>
-                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('notes')}}">ЗАМЕТКИ</a></div>
-                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('price')}}">ЦЕНЫ</a></div>
-                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('contact')}}">КОНТАКТЫ</a></div>
-                            <div><a id="inst_link_mobile" href="https://www.instagram.com/titova_wow/">Instagram</a></div>
+                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('about_me')}}" title="Обо мне">ОБО МНЕ</a></div>
+                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('notes')}}" title="Заметки">ЗАМЕТКИ</a></div>
+                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('price')}}" title="Цены">ЦЕНЫ</a></div>
+                            <div><img src="{{ asset('img/activ_link.svg') }}"><a href="{{asset('contact')}}" title="Контакты">КОНТАКТЫ</a></div>
+                            <div><a id="inst_link_mobile" href="https://www.instagram.com/titova_wow/" title="Instagram">Instagram</a></div>
                         </div>
                 </div>
             </div>

@@ -215,6 +215,10 @@ html { overflow-x: hidden; }
 			width: 97%;
 		box-sizing: border-box;
 	}
+	.index_form button:hover{
+		border-color: rgba(47, 53, 65, 0.5);
+		color: #2F3541;
+	}
 
 /* SLIDER */
 
@@ -295,7 +299,7 @@ html { overflow-x: hidden; }
 /* SLIDER end */
 
 
-@media only screen and (max-width:670px){
+@media only screen and (min-width:320px) and (max-width:767px){
 	body{
 		background-color: white;
 	}
@@ -393,7 +397,7 @@ html { overflow-x: hidden; }
 	}
 
 }
-@media only screen and (min-width:671px) and (max-width:1020px){
+@media only screen and (min-width:768px) and (max-width:1279px){
 	body{
 		background-color: white;
 	}
@@ -469,12 +473,15 @@ html { overflow-x: hidden; }
 		text-transform: uppercase;
 		width: 97%;
 	}
+	.block{
+		display: block;
+	}
 
 
 
 }
 
-@media only screen and (min-width:1021px) and (max-width:1900px){
+@media only screen and (min-width:1280px) and (max-width:1920px){
 	.logo_img_mobile{
 		display: none;
 	}
@@ -495,7 +502,7 @@ html { overflow-x: hidden; }
 	}
 }
 
-@media only screen and (min-width:1901px){
+@media only screen and (min-width:1921px){
 	.menu{
 		padding: 69.2px 7.2% 0 7.8%;
 	}

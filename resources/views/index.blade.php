@@ -14,17 +14,17 @@
                 <img class="photo" src="{{ asset('img/photo/'.$one->name.'.jpg')}}"  id="ph{{$a}}" data-id2="{{$a}}" alt="прическа {{$a}}">
             </div>
                 <div class="block">
-                    <img src="{{ asset('img/want_it.svg')}}" data-id="{{$a}}" class="img_button">
+                    <img src="{{ asset('img/want_it.svg')}}" data-id="{{$a}}" class="img_button" alt="Открыть форму">
                 </div>
                 <div class="modal" id="{{$a}}">
                     <form method="POST" action="{{asset('message/'.$one->id)}}" class="index_form">
                         {!! csrf_field() !!}
                         <h2>Хотите так же?</h2>
                         <p>Оставьте ваши контакты и я свяжусь вами в ближайшее время =)</p>
-                        <input type="text" name="contact" placeholder="Ваш телефон или email"><br>
-                        <button type="submit">Отправить</button><br>
+                        <input onkeyup='checkParams2()' id="index_form_input" type="text" name="contact" placeholder="Ваш телефон или email"><br>
+                        <button id="index_submit" type="submit">Отправить</button><br>
                     </form>
-                    <img class="closeButton" src="img/form_close_but.svg">
+                    <img class="closeButton" src="img/form_close_but.svg" alt="Закрыть форму">
                 </div>
             
         </div>
